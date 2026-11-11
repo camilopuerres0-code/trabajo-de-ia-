@@ -1,0 +1,32 @@
+.banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px 18px 26px;
+  margin-bottom: 24px;
+  border-radius: var(--radio);
+  color: var(--papel);
+  box-shadow: var(--sombra);
+  animation: cambiar 0.4s ease-out;
+}
+@keyframes cambiar { from { opacity: 0.4; transform: translateX(10px); } to { opacity: 1; transform: none; } }
+.icono {
+  font-size: 2rem;
+  width: 56px; height: 56px;
+  display: grid; place-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+.banner strong { font-family: var(--f-titulo); font-size: 1.15rem; letter-spacing: -0.01em; }
+.banner p { font-size: 0.92rem; line-height: 1.35; margin-top: 2px; opacity: 0.95; }
+.puntos { position: absolute; left: 0; right: 0; bottom: 8px; display: flex; justify-content: center; gap: 2px; }
+.puntos button {
+  width: 28px; height: 20px; border: none; background: transparent; position: relative;
+}
+.puntos button::after {
+  content: ''; position: absolute; left: 4px; right: 4px; top: 8px; height: 4px;
+  border-radius: 2px; background: rgba(255, 255, 255, 0.4);
+}
+.puntos button.on::after { background: var(--papel); }

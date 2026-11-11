@@ -1,0 +1,10 @@
+.overlay { position: fixed; inset: 0; z-index: 200; background: rgba(10, 30, 21, 0.85); display: grid; place-items: center; padding: 16px; animation: aparecer 0.2s; }
+@keyframes aparecer { from { opacity: 0; } to { opacity: 1; } }
+.contenido { position: relative; width: 100%; max-width: 720px; max-height: 92dvh; overflow: auto; background: var(--papel); border-radius: var(--radio); }
+.cerrar { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; border-radius: 50%; border: none; background: var(--sol); color: var(--hoja); font-weight: 800; font-size: 1.1rem; z-index: 2; }
+.imagenGrande { width: 100%; max-height: 62dvh; object-fit: contain; background: var(--hoja-suave); display: block; }
+.info { padding: 16px 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+.tituloModal { font-family: var(--f-titulo); font-weight: 800; font-size: 1.3rem; color: var(--hoja); letter-spacing: -0.02em; }
+.metaModal { font-size: 0.9rem; color: var(--tinta-2); }
+.licencia { font-weight: 700; color: var(--hoja-2); }
+.enlace { margin-top: 6px; color: var(--hoja-2); font-weight: 700; }

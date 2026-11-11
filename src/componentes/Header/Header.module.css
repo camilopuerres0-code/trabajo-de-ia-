@@ -1,0 +1,41 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  color: var(--papel);
+  background-color: var(--hoja);
+  /* surcos de campo: líneas curvas que recuerdan la tierra arada */
+  background-image:
+    repeating-linear-gradient(172deg, transparent 0 14px, rgba(255, 255, 255, 0.07) 14px 16px),
+    linear-gradient(120deg, var(--hoja) 0%, var(--hoja-2) 100%);
+  border-bottom: 4px solid var(--sol);
+  overflow: hidden;
+}
+.headerBrand { display: flex; align-items: center; gap: 12px; }
+.logoIcon {
+  width: 42px; height: 42px;
+  background: var(--sol);
+  border-radius: 14px 14px 14px 4px;
+  display: grid; place-items: center;
+  transform: rotate(-6deg);
+}
+.logoIcon svg { width: 24px; height: 24px; }
+.logoIcon svg path:first-child { fill: var(--hoja); }
+.logoIcon svg path:last-child { stroke: var(--sol); }
+.marca { display: flex; flex-direction: column; line-height: 1.05; }
+.brandName { font-family: var(--f-titulo); font-weight: 800; font-size: 1.5rem; letter-spacing: -0.03em; }
+.lema { font-size: 0.78rem; color: #c9e3cf; margin-top: 3px; }
+.texto { display: flex; gap: 6px; }
+.texto button {
+  min-width: 44px; height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--papel);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.texto button:hover { background: var(--sol); color: var(--hoja); border-color: var(--sol); }
+@media (min-width: 900px) { .header { padding: 16px 40px; } }

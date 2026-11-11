@@ -1,0 +1,65 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Paleta "surco": hoja, sol, suelo y campo */
+  --hoja: #0f4d36;
+  --hoja-2: #176b4a;
+  --hoja-suave: #dcebd9;
+  --sol: #ffc531;
+  --sol-fuerte: #f0a800;
+  --suelo: #4a3322;
+  --campo: #eef3e8;
+  --papel: #ffffff;
+  --tinta: #17261e;
+  --tinta-2: #55655a;
+  --linea: #d6e0cf;
+
+  /* Semáforo de riesgo */
+  --r-bajo: #2a9248;
+  --r-medio: #e9a100;
+  --r-alto: #e5600b;
+  --r-critico: #c4202e;
+
+  --radio: 18px;
+  --radio-s: 12px;
+  --sombra: 0 1px 2px rgba(23, 38, 30, 0.06), 0 8px 24px -12px rgba(23, 38, 30, 0.18);
+
+  --f-titulo: 'Bricolage Grotesque', 'Instrument Sans', system-ui, sans-serif;
+  --f-texto: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+
+  /* alias usados por componentes antiguos */
+  --green-primary: var(--hoja-2);
+  --green-light: var(--hoja-suave);
+  --green-dark: var(--hoja);
+  --text-dark: var(--tinta);
+  --text-muted: var(--tinta-2);
+  --border: var(--linea);
+  --white: var(--papel);
+  --radius: var(--radio-s);
+  --shadow: var(--sombra);
+}
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--f-texto);
+  background: var(--campo);
+  color: var(--tinta);
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select { font-family: inherit; }
+button { cursor: pointer; }
+
+:focus-visible {
+  outline: 3px solid var(--sol-fuerte);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

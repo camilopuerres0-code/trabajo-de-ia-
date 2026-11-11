@@ -1,0 +1,27 @@
+/* src/componentes/PanelIA/PanelIA.module.css — paleta "surco" de TerraSur */
+.panel {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-left: 4px solid var(--sol-fuerte); /* color distintivo para el contenido generado por IA */
+  border-radius: var(--radio-s);
+  padding: 1.2rem 1.5rem;
+  margin-top: 20px;
+  box-shadow: var(--sombra);
+}
+.cabecera {
+  display: flex; justify-content: space-between;
+  align-items: center; gap: 1rem; flex-wrap: wrap;
+}
+.titulo { font-family: var(--f-titulo); color: var(--hoja); font-size: 1.1rem; margin: 0; }
+.boton {
+  background: var(--hoja-2); color: #fff; border: none; padding: 0.55rem 1.1rem;
+  border-radius: 6px; font-weight: 600; cursor: pointer; min-height: 44px;
+}
+.boton:disabled { background: #9aa99f; cursor: not-allowed; }
+.texto { color: var(--tinta); line-height: 1.6; white-space: pre-wrap; margin: 1rem 0 0.4rem; }
+.aviso { color: var(--tinta-2); font-size: 0.8rem; }
+.vacio { color: var(--tinta-2); margin: 1rem 0 0; }
+.error {
+  background: #fdecee; border: 1px solid #f3b9bf; color: #8f1624;
+  padding: 0.7rem; border-radius: 6px; margin-top: 1rem; font-weight: 600;
+}
